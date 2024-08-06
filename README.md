@@ -17,5 +17,7 @@ The software is a Maven project programmed in VSCode using the "Extension Pack f
 
 ```GRAB``` grabs the next available pamphlet and offers it (_stepper.02_move_-4000|_stepper.01_move__-2000|_stepper.03_move__2000|stepper.00_move_12000|stepper.00_move_-36000|_stepper.02_move__-3000;_stepper.03_move__4000_)
 
+The arm must start in the default position (can be found in the assembly)
+
 # Possible Challenges
 Ensure the extrusion is tightly secured or mounted. Failure to do so may cause the arm to become imbalanced and difficult to control. Ensure the spacing of the pulleys allows for enough tension to prevent slippage of the belt.
