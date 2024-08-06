@@ -1,0 +1,4 @@
+﻿Using my experience and skills from creating my first project as an intern at Hextronics, I’ve been able to challenge myself in taking the next step in expanding my proficiency as an engineer. This project has furthered my ability to think critically when it comes to overcoming design obstacles, tackling issues while programming, and being a creative. With the abundance of tools and ease of access to information, mentors, and materials provided by Hextronics facilities, I was able to focus on the mechanical side of the project and complete it within the span of a month.
+
+
+Through the use of HexTech, I have been able to efficiently and effectively create an easy-to-use interface to control the robot arm. The portability and ease of use of HexTech allowed for quick testing and implementation of ideas. I was able to fully utilize the advantages of the HexTech board to create the robot arm.
