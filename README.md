@@ -1,8 +1,9 @@
-# HexTechAutomaticPencilSharpener
-Automatic Pencil Sharpener Using HexTech
+# HexTechRobotArm
+Pamphlet Dispensing SCARA Robot Arm Using HexTech
 
 # Project
-An automatic pencil sharpener made using the HexTech muscle board inspired by [Projects With Red](https://www.youtube.com/watch?v=7P9160cqDPM). Modifications have been made to adjust to the use of HexTech.
+A SCARA robot arm using the HexTech muscle board inspired by [IV Projects](https://www.youtube.com/watch?v=pTr45EagXwk&t=204s). Modifications have been made to adjust to the use of HexTech. The arm is made of 3 segments and a hand. The first segment is attached to an extrusion via a plate of wheels. Each segment uses different compositions of pulleys and belts to control, using stepper motors, the rotation of the subsequent segment. The height of the arm is controlled using a lead screw attached through the first segment of the arm. The arm is able to lift pamphlets using synthetic, rubber-based adhesives attached to the underside of the hand.
+
 
 # MQTT Server
 The HexTech muscle board receives input through an MQTT Server. An **MQTT client**, the HexTech board, establishes a connection with the **MQTT broker**. When the MQTT broker receives a message, it forwards it to subscribers (the HexTech board).
@@ -12,18 +13,9 @@ The **software**, programmed in Java, can publish messages to the MQTT broker.
 # Software
 The software is a Maven project programmed in VSCode using the "Extension Pack for Java" plugin. In the App java file, the user is given access, through a GUI window, to multiple functions used to control the machine.
 
-**Manual**
+**Commands**
 
-```MOVE``` moves the pencil forward (_stepper.00_move_2000_1_)
-
-```RESET``` moves the pencil backward (_stepper.00_move__-_2000_1_)
-
-```SHARPEN``` moves the pencil forward slightly and rotates the pencil (_stepper.00_move_200_1; dc.00_move_800_)
-
-**Automatic**
-
-```AUTOSHARPEN``` automates the process of sharpening the pencil; place the pencil in the socket and press autosharpen for the pencil to come out sharpened with no further input (_stepper.00_speed_1000|stepper.00_move_4300_1|stepper.00_speed_400;stepper.00_move_3400_1;dc.00_move_9000|stepper.00_speed_1000|
-stepper.00_move_-_6900__1_)
+```GRAB``` grabs the next available pamphlet and offers it (_stepper.02_move_-4000|_stepper.01_move__-2000|_stepper.03_move__2000|stepper.00_move_12000|stepper.00_move_-36000|_stepper.02_move__-3000;_stepper.03_move__4000_)
 
 # Possible Challenges
-Ensure you are using a standard No. 2 pencil (a diameter of approximately 8 mm) for the pencil to fit through the support, in the sharpener, and in the coupler. Ensure the speed of the stepper motor does not exceed 500 while sharpening or else the pencil will jam in the sharpener.
+Ensure the extrusion is tightly secured or mounted. Failure to do so may cause the arm to become imbalanced and difficult to control. Ensure the spacing of the pulleys allows for enough tension to prevent slippage of the belt.
